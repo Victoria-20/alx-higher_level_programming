@@ -1,12 +1,16 @@
 #!/usr/bin/python3
+
+mot = ""
+
+
 def fizzbuzz():
-    for i in range(1, 101):
-        if i % 15 == 0:
-            print("FizzBuzz")
-        elif i % 3 == 0:
-            print("Fizz")
-        elif i % 5 == 0:
-            print("Buzz")
+    for num in range(1, 101):
+        if num % 3 == 0 and num % 5 == 0:
+            mot = "FizzBuzz"
+        elif num % 3 == 0:
+            mot = "Fizz"
+        elif num % 5 == 0:
+            mot = "Buzz"
         else:
-            print(i)
-fizzbuzz()
+            mot = str(num)
+        print(mot, end=" ")

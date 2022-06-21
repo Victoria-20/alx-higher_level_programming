@@ -1,15 +1,12 @@
 #!/usr/bin/python3
 
 
-def safe_print_list_integers(my_list=[], x=0):
-    count = 0
-    for element in range(x):
-        try:
-            print("{:d}".format(my_list[element]), end="")
-            count = count + 1
-        except TypeError:
-            pass
-        except ValueError:
-            pass
-    print()
-    return count
+import sys
+
+
+def safe_function(fct, *args):
+    try:
+        return(fct(*args))
+    except Exception as e:
+        print(f"Exception: {e}", file=sys.stderr)
+        return (None)

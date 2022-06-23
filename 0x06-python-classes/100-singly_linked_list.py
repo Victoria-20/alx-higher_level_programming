@@ -50,7 +50,7 @@ class Node:
         """Set the value for the next node """
         self.__next_node = value
 
-        if not self.__next_node == None or self.__next_node == Node:
+        if not self.value == None or self.value == Node:
             raise TypeError("next_node must be a Node object")
 
 

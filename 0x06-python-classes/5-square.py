@@ -60,6 +60,8 @@ class Square:
         Examples:
         """
         if self.__size == 0:
-            print()
-        else:
-            print(f"{self.__size * '#'}")
+            print("")
+        """Print the square with the # character."""
+        for i in range(0, self.__size):
+            [print("#", end="") for j in range(self.__size)]
+            print("")

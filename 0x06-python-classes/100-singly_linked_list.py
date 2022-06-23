@@ -1,54 +1,64 @@
 #!/usr/bin/python3
 
 """Module Docstring.
-This module demostrates how to create a class named Square
-that defines a square.
+This module demostrates how to create a node of a singly linked list.
 
 """
 
 
-class Square:
-    """Defines a square
+class Node:
+    """Defines a Node
     Args:
         No parameters
     Attributes:
         No attributes
 
     """
-    def __init__(self, size=0):
-        """Initializes a new square
+    def __init__(self, data, next_node=None):
+        """Initializes attributes of a node
         Args:
-            size (int): size of the square"""
-        self.__size = size
-        if not type(self.__size) is int:
-            raise TypeError("size must be an integer")
-        elif self.__size < 0:
-            raise ValueError("size must be >= 0")
+            data (int): size of the square
+            next_node: pointer to next node or None
+        """
+        self.__data = data
+        self.__next_node = next_node
 
     @property
-    def size(self):
-        """ getter function to set the size
-            Returns:
-                size
-        """
-        return self.__size
+    def data(self):
+        """function to get the data"""
+        return self.__data
 
-    @size.setter
-    def size(self, value):
-        """ setter function to assign value to size
+    @data.setter
+    def data(self, value):
+        """function to assign value to data
             Args:
-                value (int): value to be assigned to size
+                value (int): value to be assigned to data
         """
-        if not type(value) is int:
-            raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = value
 
-    def area(self):
-        """Calculates the current square area
-        Args:
-        Returns:
-        Examples:
-        """
-        return self.__size ** 2
+        if not type(value) is int:
+            raise TypeError("data must be an integer")
+
+        self.__data = value
+
+    @property
+    def next_node(self):
+        """Get the next node """
+        return self.__next_node
+
+    @next_node.setter
+    def next_node(self, value):
+        """Set the value for the next node """
+        self.__next_node = value
+
+        if not self.__next_node == None or self.__next_node == Node:
+            raise TypeError("next_node must be a Node object")
+
+
+class SinglyLinkedList:
+    """Defines a singly linked list"""
+    def __init__(self, head):
+        """Initializes the class"""
+        self.__head = head
+
+    def sorted_insert(self, value):
+        """Inserts a new node in sorted order"""

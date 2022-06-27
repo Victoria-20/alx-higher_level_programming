@@ -1,0 +1,23 @@
+The function ``add_integer()`` returns the sum of its arguments.
+For integers, that number is equivalent to using the ``+`` operator.
+
+::
+>>> from 0-add_integer.py import add_integer
+>>> add_integer(2, 4)
+6
+
+For floating point numbers.
+
+::
+
+>>> add_integer(2.0, 5)
+7
+
+For negative numbers.
+
+::
+
+>>> add_integer(-5, 10)
+5
+
+   

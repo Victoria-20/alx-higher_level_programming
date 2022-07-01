@@ -1,0 +1,38 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+::
+
+>>> say_my_name("Oguti", "Victoria")
+My name is Oguti Victoria
+
+value for first name as int
+::
+
+>>> say_my_name(9032, "Ocon")
+Traceback (most recent call last):
+        ...
+TypeError: first_name must be a string
+
+first_name missing
+::
+
+>>> say_my_name(None, "Ocon")
+Traceback (most recent call last):
+        ...
+TypeError: first_name must be a string
+
+last_name wrong type
+::
+
+>>> say_my_name("Oguti", 8392)
+Traceback (most recent call last):
+        ...
+TypeError: last_name must be a string
+
+missing first_name and last_name arguments
+::
+
+>>> say_my_name()
+Traceback (most recent call last):
+	...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'

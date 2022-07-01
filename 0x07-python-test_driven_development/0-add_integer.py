@@ -1,15 +1,23 @@
 #!/usr/bin/python3
-""" Calculation module """
+"""
+
+ Module to calculate the sum of integers
+
+ """
+
 
 def add_integer(a, b=98):
-    """ function to return sum of two integers """
+    """
+    Function to return sum of two integers
 
-    test_a = type(a) in [int, float]
-    test_b = type(b) in [int, float]
+    """
 
-    if test_a and test_b:
-        return a + b
-    elif test_a:
+    if type(a) not in [int, float] or a is None:
         raise TypeError("a must be an integer")
-    elif test_b:
+    if type(b) not in [int, float] or b is None:
         raise TypeError("b must be an integer")
+    if type(a) is float:
+        a = int(a)
+    if type(b) is float:
+        b = int(b)
+    return a + b

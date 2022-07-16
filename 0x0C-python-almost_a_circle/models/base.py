@@ -2,6 +2,10 @@
 
 """ Description: Creates a class named Base """
 
+import json
+import csv
+import os
+
 
 class Base():
     """ Base Class"""
@@ -73,7 +77,7 @@ class Base():
         try:
             with open(fname, encoding='utf8') as jfile:
                 content = cls.from_json_string(jfile.read())
-        except:
+        except NameError:
             return []
 
         instances = []

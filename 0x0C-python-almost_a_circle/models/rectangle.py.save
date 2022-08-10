@@ -1,0 +1,52 @@
+#!/usr/bin/python3
+
+"""Description: Defines a class Rectangle"""
+
+
+from base import Base
+
+class Rectagle(Base):
+    """ Class Rectangle inherits from Base class"""
+    def __init__(self, width, height, x=0, y=0, id=None):
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+
+    @property
+    def width(self):
+        """ Retrieves the width
+            Returns:
+                width
+        """
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """ sets the width
+            Args:
+                value (int): value to be assigned to width
+        """
+        self.__width = width
+
+    @property
+    def width(self):
+        """ Retrieves the width
+            Returns:
+                width
+        """
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """ sets the width
+            Args:
+                value (int): value to be assigned to width
+        """
+        if not type(value) is int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
+
+

@@ -1,3 +1,2 @@
--- lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server.
-SELECT score, name FROM second_table WHERE name IS NOT NULL ORDER BY score DESC 
-
+-- displays the max temperature of each state (ordered by State name).
+SELECT state, MAX(value) AS maximum_temperature FROM temperatures GROUP BY state ORDER BY state;

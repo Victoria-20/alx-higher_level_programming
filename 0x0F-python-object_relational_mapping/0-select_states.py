@@ -29,4 +29,4 @@ if __name__ == "__main__":
         # Close all cursors
         cur.close()
         # Close db connection
-        conn.close()
+        db.close()

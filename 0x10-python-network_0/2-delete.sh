@@ -1,2 +1,3 @@
 #!/bin/bash
-# takes in the url, sends request
+# sends DELETE reuest to url and display body
+curl -s "$1" -X DELETE

@@ -5,7 +5,7 @@
 """
 
 if __name__ == "__main__":
-    from requests
+    import requests
     import sys
 
     email = {"email": sys.argv[2]}

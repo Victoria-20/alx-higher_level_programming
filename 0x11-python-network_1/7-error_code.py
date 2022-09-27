@@ -5,7 +5,7 @@
 """
 
 if __name__ == "__main__":
-    from requests
+    import requests
     import sys
 
     res = requests.get(sys.argv[1])
